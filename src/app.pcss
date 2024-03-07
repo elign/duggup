@@ -32,7 +32,6 @@
     --destructive-foreground: 210 40% 98%;
  
     --ring: 222.2 84% 4.9%;
- 
     --radius: 0.5rem;
   }
  
@@ -71,8 +70,16 @@
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Inter', sans-serif;
   }
   body {
     @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth; 
+  }
+  span {
+    font-family: inherit;
+    font-weight: inherit;
   }
 }
