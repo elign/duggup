@@ -2,6 +2,8 @@
   import TimelineV1 from "./sections/timelineV1.svelte";
   import TimelineV2 from "./sections/timelineV2.svelte";
   import ProfileSection from "./sections/profileSection.svelte";
+  import { data1 } from "../lib/data";
+  import { data2 } from "../lib/data";
 </script>
 
 <div
@@ -11,11 +13,21 @@
   <ProfileSection />
 
   <!-- Experience Section -->
-  <TimelineV1 />
+  <TimelineV1 date="Dec 2023" cardData={data1} />
   <!-- Another experience section -->
-  <TimelineV2 />
+  <TimelineV2
+    companyName="Duggup"
+    location="San Francisco Bay Area"
+    date="Nov 2023"
+    logo="/icons/logo-cir.svg"
+  />
   <!-- Third Experience section -->
-  <TimelineV1 />
+  <TimelineV1 date="Dec 2023" cardData={data2} />
 
-  <TimelineV2 />
+  <TimelineV2
+    companyName="BetterUp"
+    location="San Francisco Bay Area"
+    date="Nov 2023"
+    logo="/icons/better-up.svg"
+  />
 </div>

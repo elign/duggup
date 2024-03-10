@@ -1,6 +1,10 @@
 <script>
   import Card from "./card.svelte";
-  export let date ="";
+  export let cardData = [
+    { imgUrl: "", text: "" },
+    { imgUrl: "", text: "" },
+  ];
+  export let date = "";
 </script>
 
 <div class="container">
@@ -9,7 +13,7 @@
       <p
         class="col-start-1 col-end-1 self-center text-right text-sm text-gray-400"
       >
-        Dec 2023
+        {date}
       </p>
       <div class="col-start-2 col-end-2 mr-10 md:mx-auto relative">
         <div class="h-full w-6 flex items-center justify-center">
@@ -25,14 +29,8 @@
       <div
         class="bg-white-500 col-start-3 col-end-10 my-4 mr-auto w-full flex gap-8"
       >
-        <Card
-          imgUrl="steve.jpg"
-          text="No amount of technology can convert a bad story into a good story."
-        />
-        <Card
-          imgUrl="sam.webp"
-          text="No amount of technology can convert a bad story into a good story."
-        />
+        <Card imgUrl={cardData[0].imgUrl} text={cardData[0].text} />
+        <Card imgUrl={cardData[1].imgUrl} text={cardData[1].text} />
       </div>
     </div>
   </div>
