@@ -14,7 +14,7 @@
     <button class="md:hidden grid place-items-center">
       <i class="fa-solid fa-bars"></i>
     </button>
-    <nav class="hidden md:flex items-center gap-12">
+    <nav class="hidden md:flex items-center gap-12 sm:hidden">
       <a class="flex items-center gap-3 hover:text-brand-primary" href="/"
         ><img src="/icons/home.svg" alt="" /> Home</a
       >
@@ -24,8 +24,8 @@
       <a class="flex items-center gap-3 hover:text-brand-primary" href="/"
         ><img src="/icons/book.svg" alt="" /> Learn</a
       >
-      <Button class="flex gap-2 text-white"
-        ><img src="/icons/plus.svg" alt="" /> Button</Button
+      <Button variant="cta" class="flex gap-2"
+        ><i class="fa-regular fa-square-plus"></i> Button</Button
       >
       <DropdownMenu.Root>
         <DropdownMenu.Trigger class="flex items-center gap-2">

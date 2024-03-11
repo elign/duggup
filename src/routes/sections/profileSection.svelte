@@ -19,7 +19,7 @@
       Ex-Amazon Head of Engineering. I write hot-takes on building a business,
       shipping delightful products and accelerating product and career growth.
     </p>
-    <Button variant="default" class="max-w-24">Follow</Button>
+    <Button variant="cta" class="max-w-24">Follow</Button>
   </div>
   <div class="col-start-10 col-end-12 flex flex-col items-end justify-center">
     <img src="/icons/logo-cir.svg" alt="logo" />
