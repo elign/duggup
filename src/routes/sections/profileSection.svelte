@@ -1,5 +1,10 @@
 <script>
   import Button from "$lib/components/ui/button/button.svelte";
+  let isFollowing = false;
+
+  function toggleFollow() {
+    isFollowing = !isFollowing;
+  }
 </script>
 
 <div class="grid grid-cols-12 gap-20 mb-8">
@@ -19,7 +24,9 @@
       Ex-Amazon Head of Engineering. I write hot-takes on building a business,
       shipping delightful products and accelerating product and career growth.
     </p>
-    <Button variant="cta" class="max-w-24">Follow</Button>
+    <Button on:click={toggleFollow} variant="cta" class={`max-w-24 ${isFollowing === true && "shadow-active"}`}>
+      {isFollowing ? "Followed" : "Follow"}
+    </Button>
   </div>
   <div class="col-start-10 col-end-12 flex flex-col items-end justify-center">
     <img src="/icons/logo-cir.svg" alt="logo" />
